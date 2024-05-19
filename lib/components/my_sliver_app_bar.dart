@@ -1,3 +1,4 @@
+import 'package:bruhmius/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 
 class MySliverAppBar extends StatelessWidget {
@@ -14,10 +15,16 @@ class MySliverAppBar extends StatelessWidget {
       collapsedHeight: 120,
       actions: [
         IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.shopping_cart,
-            ))
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartPage()),
+            );
+          },
+          icon: const Icon(
+            Icons.shopping_cart,
+          ),
+        )
       ],
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       backgroundColor: Theme.of(context).colorScheme.background,
