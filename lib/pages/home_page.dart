@@ -6,6 +6,7 @@ import 'package:bruhmius/components/my_sliver_app_bar.dart';
 import 'package:bruhmius/components/my_tab_bar.dart';
 import 'package:bruhmius/models/food.dart';
 import 'package:bruhmius/models/restaurant.dart';
+import 'package:bruhmius/pages/food_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,7 +49,12 @@ class _HomePageState extends State<HomePage>
           final food = categoryMenu[index];
           return FoodTile(
             food: food,
-            onTap: () {},
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FoodPage(food: food),
+              ),
+            ),
           );
         },
       );
