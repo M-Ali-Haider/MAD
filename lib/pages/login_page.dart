@@ -1,5 +1,6 @@
 import 'package:bruhmius/components/my_button.dart';
 import 'package:bruhmius/components/my_textfield.dart';
+import 'package:bruhmius/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,6 +18,22 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  void login() async {
+    final _authService = AuthService();
+    try {
+      await _authService.signInWithEmailPassWord(
+          emailController.text, passwordController.text);
+    } catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 10),
             MyButton(
               text: "Sign In",
-              onTap: () {},
+              onTap: login,
             ),
             const SizedBox(height: 25),
             Row(

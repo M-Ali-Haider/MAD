@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "805597973259",
+    "firebase_url": "https://shop-app-d988a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "shop-app-d988a",
+    "storage_bucket": "shop-app-d988a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805597973259:android:799c6a2424185fea95300e",
+        "android_client_info": {
+          "package_name": "com.foodshopapp.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsMWo6sHGkoYMT7zqeLoBEBogTts3RIO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:bruhmius/components/my_button.dart';
 import 'package:bruhmius/components/my_textfield.dart';
+import 'package:bruhmius/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -15,6 +16,29 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
+
+  void register() async {
+    final _authService = AuthService();
+
+    if (passwordController.text == confirmPasswordController.text) {
+      try {
+        await _authService.signUpWithEmailPassWord(
+            emailController.text, passwordController.text);
+      } catch (e) {
+        showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+                  title: Text(e.toString()),
+                ));
+      }
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) => const AlertDialog(
+                title: Text("Passwords don't Match"),
+              ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
           const SizedBox(height: 25),
           MyButton(
             text: "Sign Up",
-            onTap: () {},
+            onTap: register,
           ),
           const SizedBox(height: 25),
           Row(
