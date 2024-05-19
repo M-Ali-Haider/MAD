@@ -1,6 +1,7 @@
 import 'package:bruhmius/models/food.dart';
+import 'package:flutter/material.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier {
   final List<Food> _menu = [
     //burgers
     Food(
@@ -266,4 +267,11 @@ class Restaurant {
       ],
     ),
   ];
+
+  // GETTERS
+
+  List<Food> get menu => _menu;
+
+  // OPERATORS
+  // HELPERS
 }
