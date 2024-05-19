@@ -1,3 +1,5 @@
+import 'package:bruhmius/components/my_button.dart';
+import 'package:bruhmius/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -36,19 +38,19 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           const SizedBox(height: 25),
-          MyTextField(
+          MyTextfield(
             controller: emailController,
             hintText: "Email",
             obscureText: false,
           ),
           const SizedBox(height: 10),
-          MyTextField(
+          MyTextfield(
             controller: passwordController,
             hintText: 'Password',
             obscureText: true,
           ),
           const SizedBox(height: 10),
-          MyTextField(
+          MyTextfield(
             controller: confirmPasswordController,
             hintText: 'Confirm password',
             obscureText: true,
