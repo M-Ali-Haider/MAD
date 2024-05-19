@@ -1,8 +1,26 @@
 import 'package:bruhmius/components/my_receipt.dart';
+import 'package:bruhmius/models/restaurant.dart';
+import 'package:bruhmius/services/database/firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class DeliveryProgressPage extends StatelessWidget {
+class DeliveryProgressPage extends StatefulWidget {
   const DeliveryProgressPage({super.key});
+
+  @override
+  State<DeliveryProgressPage> createState() => _DeliveryProgressPageState();
+}
+
+class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
+  FireStoreService db = FireStoreService();
+
+  @override
+  void initState() {
+    super.initState();
+
+    String receipt = context.read<Restaurant>().displayCartReceipt();
+    db.saveOrderToDatabase(receipt);
+  }
 
   @override
   Widget build(BuildContext context) {
