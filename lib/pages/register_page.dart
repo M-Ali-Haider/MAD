@@ -1,5 +1,6 @@
 import 'package:bruhmius/components/my_button.dart';
 import 'package:bruhmius/components/my_textfield.dart';
+import 'package:bruhmius/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -18,6 +19,11 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
+    void signup() {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
@@ -58,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
           const SizedBox(height: 25),
           MyButton(
             text: "Sign Up",
-            onTap: () {},
+            onTap: signup,
           ),
           const SizedBox(height: 25),
           Row(
