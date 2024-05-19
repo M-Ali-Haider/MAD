@@ -42,6 +42,11 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
+    void signup() {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
