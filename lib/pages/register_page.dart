@@ -1,5 +1,6 @@
 import 'package:bruhmius/components/my_button.dart';
 import 'package:bruhmius/components/my_textfield.dart';
+import 'package:bruhmius/pages/home_page.dart';
 import 'package:bruhmius/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 

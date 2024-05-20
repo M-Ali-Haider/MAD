@@ -23,7 +23,7 @@ class Restaurant extends ChangeNotifier {
       name: "Blue Moon Burger",
       description:
           "A succulent beef patty topped with blue cheese, lettuce, tomato, and a hint of caramelized onions.",
-      imagePath: "lib/images/burgers/blue_moon_burger.png",
+      imagePath: "lib/images/burgers/bluemoon_burger.png",
       price: 300,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -35,7 +35,7 @@ class Restaurant extends ChangeNotifier {
       name: "Veggie Burger",
       description:
           "A delicious plant-based patty with lettuce, tomato, avocado, and a touch of vegan mayo.",
-      imagePath: "lib/images/burgers/veggie_burger.png",
+      imagePath: "lib/images/burgers/vege_burger.png",
       price: 220,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -72,7 +72,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Mac n Cheese",
       description: "its macroni and cheese mixed together yummy",
-      imagePath: "lib/images/burgers/macncheese_sides.png",
+      imagePath: "lib/images/sides/macncheese_sides.png",
       price: 125,
       category: FoodCategory.sides,
       availableAddons: [
@@ -83,7 +83,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Garlic Bread",
       description: "Garlic Bread is the best side of all!",
-      imagePath: "lib/images/burgers/garlicbread_sides.png",
+      imagePath: "lib/images/sides/garlicbread_sides.png",
       price: 150,
       category: FoodCategory.sides,
       availableAddons: [
@@ -94,7 +94,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Loaded Sweet Potato Fries",
       description: "Savory sweet potato fries melted with cheese.",
-      imagePath: "lib/images/burgers/loadedfries_sides.png",
+      imagePath: "lib/images/sides/loadedfries_sides.png",
       price: 200,
       category: FoodCategory.sides,
       availableAddons: [
@@ -102,23 +102,12 @@ class Restaurant extends ChangeNotifier {
         Addon(name: "Extra Fries", price: 100),
       ],
     ),
-    Food(
-      name: "Garlic Bread",
-      description: "Garlic Bread is the best side of all!",
-      imagePath: "lib/images/burgers/garlicbread_sides.png",
-      price: 150,
-      category: FoodCategory.sides,
-      availableAddons: [
-        Addon(name: "Extra Cheese", price: 50),
-        Addon(name: "Extra Garlic", price: 50),
-      ],
-    ),
 
     //salads
     Food(
       name: "South West Chicken Salad",
       description: "its a salad from southern west with chicken in it",
-      imagePath: "lib/images/burgers/southwestsalad_salads.png",
+      imagePath: "lib/images/salads/southwest.jpeg",
       price: 125,
       category: FoodCategory.salads,
       availableAddons: [
@@ -130,7 +119,7 @@ class Restaurant extends ChangeNotifier {
       name: "Asian Sesame Salad",
       description:
           "A flavorful salad with Asian sesame dressing, mixed greens, and grilled chicken.",
-      imagePath: "lib/images/salads/asiansesame_salad.png",
+      imagePath: "lib/images/salads/asian.png",
       price: 150,
       category: FoodCategory.salads,
       availableAddons: [
@@ -142,7 +131,7 @@ class Restaurant extends ChangeNotifier {
       name: "Quinoa Salad",
       description:
           "A healthy salad with quinoa, fresh vegetables, and a lemon vinaigrette.",
-      imagePath: "lib/images/salads/quinoa_salad.png",
+      imagePath: "lib/images/salads/quiona.png",
       price: 135,
       category: FoodCategory.salads,
       availableAddons: [
@@ -154,7 +143,7 @@ class Restaurant extends ChangeNotifier {
       name: "Caesar Salad",
       description:
           "Classic Caesar salad with romaine lettuce, croutons, and Caesar dressing.",
-      imagePath: "lib/images/salads/caesar_salad.png",
+      imagePath: "lib/images/salads/caesar.png",
       price: 120,
       category: FoodCategory.salads,
       availableAddons: [
@@ -166,7 +155,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Cheese Cake",
       description: "A classic cheese cake lol",
-      imagePath: "lib/images/burgers/cheesecake_desserts.png",
+      imagePath: "lib/images/desserts/cheesecake.png",
       price: 800,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -175,9 +164,9 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
     Food(
-      name: "Applie Pie",
+      name: "Apple Pie",
       description: "A classic apple pie cake lol",
-      imagePath: "lib/images/burgers/applepie_desserts.png",
+      imagePath: "lib/images/desserts/applepie.png",
       price: 550,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -188,7 +177,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Pear Pie",
       description: "A classic pear pie cake lol",
-      imagePath: "lib/images/burgers/pearpie_desserts.png",
+      imagePath: "lib/images/desserts/pearpie.png",
       price: 650,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -198,17 +187,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Red Velvet Cake",
       description: "A red velvet cake lol",
-      imagePath: "lib/images/burgers/redvelvetcake_desserts.png",
-      price: 700,
-      category: FoodCategory.desserts,
-      availableAddons: [
-        Addon(name: "Sprinkles", price: 100),
-      ],
-    ),
-    Food(
-      name: "Red Velvet Cake",
-      description: "A red velvet cake lol",
-      imagePath: "lib/images/burgers/redvelvetcake_drink.png",
+      imagePath: "lib/images/desserts/redvelvet.png",
       price: 700,
       category: FoodCategory.desserts,
       availableAddons: [
@@ -220,7 +199,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Iced Tea",
       description: "A classic ice tea lol",
-      imagePath: "lib/images/burgers/icetea_drink.png",
+      imagePath: "lib/images/drinks/icetea.png",
       price: 200,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -230,7 +209,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Lemonade",
       description: "A classic lemonade lol",
-      imagePath: "lib/images/burgers/lemonade_drink.png",
+      imagePath: "lib/images/drinks/lemonade.png",
       price: 150,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -240,7 +219,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Smoothie",
       description: "A classic smoothie lol",
-      imagePath: "lib/images/burgers/smoothie_drink.png",
+      imagePath: "lib/images/drinks/smoothie.png",
       price: 100,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -251,7 +230,7 @@ class Restaurant extends ChangeNotifier {
       name: "Mojito",
       description:
           "A classic drink made with lime and mint and sweetened with sugar.",
-      imagePath: "lib/images/burgers/mojito_drink.png",
+      imagePath: "lib/images/drinks/mojito.png",
       price: 150,
       category: FoodCategory.drinks,
       availableAddons: [
@@ -262,7 +241,7 @@ class Restaurant extends ChangeNotifier {
       name: "Caramel Macchiato",
       description:
           "A layered coffee drink with steamed milk espresso and vanilla syrup",
-      imagePath: "lib/images/burgers/caramel_drink.png",
+      imagePath: "lib/images/drinks/caramel.png",
       price: 170,
       category: FoodCategory.drinks,
       availableAddons: [
