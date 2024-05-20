@@ -23,7 +23,7 @@ class MyDescriptionBox extends StatelessWidget {
           Column(
             children: [
               Text(
-                "\$0.99",
+                "PKR 50",
                 style: myPrimaryTextStyle,
               ),
               Text(

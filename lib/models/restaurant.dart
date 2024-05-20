@@ -342,7 +342,7 @@ class Restaurant extends ChangeNotifier {
   }
 
   String _formatPrice(double price) {
-    return "\$${price.toStringAsFixed(2)}";
+    return "PKR ${price.toStringAsFixed(2)}";
   }
 
   String _formatAddons(List<Addon> addons) {
